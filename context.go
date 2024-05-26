@@ -62,12 +62,12 @@ func (ctx *Context) Source() Source {
 }
 
 // Lock locks the mutex within the context
-func (ctx *Context) Lock(key string, val any) {
+func (ctx *Context) Lock() {
 	ctx.mtx.Lock()
 }
 
 // Unlock unlocks the mutex within the context
-func (ctx *Context) Unlock(key string, val any) {
+func (ctx *Context) Unlock() {
 	ctx.mtx.Unlock()
 }
 
